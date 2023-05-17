@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
           <nav>
             <ul className={styles.nav}>
               {links.map(({ label, route }) => (
-                <li key={route}>
+                <li key={route} className={styles.buttonNav}>
                   <Link href={route}>{label}</Link>
                 </li>
               ))}
@@ -40,6 +40,12 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         {children}
+        <a href="https://www.linkedin.com/in/agustinandrada-fwd/">
+          <footer className={styles.footer}>
+            App developed by
+            {" Agustin Andrada "}
+          </footer>
+        </a>
       </body>
     </html>
   );
